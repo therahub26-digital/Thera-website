@@ -85,13 +85,13 @@
 <section class="band"><div class="in">
   <div class="eyebrow">Materi Presentasi</div>
   <h2>Proposal komersial <em>TheraHub</em></h2>
-  <p class="lead">Lima halaman proposal yang kami pakai saat presentasi — klik untuk membuka ukuran penuh.</p>
+  <p class="lead">Lima halaman proposal yang kami pakai saat presentasi — klik salah satu, lalu geser ke kiri atau kanan untuk melihat halaman berikutnya.</p>
   <div class="gallery">
-    <figure><a href="img/proposal-1.jpg" target="_blank" rel="noopener"><img src="img/proposal-1.jpg" alt="Halaman 1 proposal: Proposal Penawaran Aplikasi TheraHub" loading="lazy"></a><figcaption>1 · Proposal Penawaran</figcaption></figure>
-    <figure><a href="img/proposal-2.jpg" target="_blank" rel="noopener"><img src="img/proposal-2.jpg" alt="Halaman 2 proposal: Mengapa TheraHub — tantangan umum outlet spa dan jawabannya" loading="lazy"></a><figcaption>2 · Mengapa TheraHub?</figcaption></figure>
-    <figure><a href="img/proposal-3.jpg" target="_blank" rel="noopener"><img src="img/proposal-3.jpg" alt="Halaman 3 proposal: Fitur unggulan untuk seluruh tim per peran" loading="lazy"></a><figcaption>3 · Fitur untuk Seluruh Tim</figcaption></figure>
-    <figure><a href="img/proposal-4.jpg" target="_blank" rel="noopener"><img src="img/proposal-4.jpg" alt="Halaman 4 proposal: TheraHub membuat outlet lebih efisien dan menguntungkan" loading="lazy"></a><figcaption>4 · Lebih Efisien &amp; Untung</figcaption></figure>
-    <figure><a href="img/proposal-6.jpg" target="_blank" rel="noopener"><img src="img/proposal-6.jpg" alt="Halaman 6 proposal: Ruang lingkup implementasi dan ajakan kerja sama" loading="lazy"></a><figcaption>5 · Implementasi &amp; Kerja Sama</figcaption></figure>
+    <figure><a href="img/proposal-1.jpg"" data-lb><img src="img/proposal-1.jpg" alt="Halaman 1 proposal: Proposal Penawaran Aplikasi TheraHub" loading="lazy"></a><figcaption>1 · Proposal Penawaran</figcaption></figure>
+    <figure><a href="img/proposal-2.jpg"" data-lb><img src="img/proposal-2.jpg" alt="Halaman 2 proposal: Mengapa TheraHub — tantangan umum outlet spa dan jawabannya" loading="lazy"></a><figcaption>2 · Mengapa TheraHub?</figcaption></figure>
+    <figure><a href="img/proposal-3.jpg"" data-lb><img src="img/proposal-3.jpg" alt="Halaman 3 proposal: Fitur unggulan untuk seluruh tim per peran" loading="lazy"></a><figcaption>3 · Fitur untuk Seluruh Tim</figcaption></figure>
+    <figure><a href="img/proposal-4.jpg"" data-lb><img src="img/proposal-4.jpg" alt="Halaman 4 proposal: TheraHub membuat outlet lebih efisien dan menguntungkan" loading="lazy"></a><figcaption>4 · Lebih Efisien &amp; Untung</figcaption></figure>
+    <figure><a href="img/proposal-6.jpg"" data-lb><img src="img/proposal-6.jpg" alt="Halaman 6 proposal: Ruang lingkup implementasi dan ajakan kerja sama" loading="lazy"></a><figcaption>5 · Implementasi &amp; Kerja Sama</figcaption></figure>
   </div>
 </div></section>
 
@@ -109,5 +109,45 @@
 </div></footer>
 
 <script src="site.js"></script>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Proposal TheraHub">
+  <div class="lb-top"><span class="lb-count" id="lb-count">1 / 5</span><button class="lb-x" id="lb-x" aria-label="Tutup">✕</button></div>
+  <div class="lb-track" id="lb-track"></div>
+  <button class="lb-nav lb-prev" id="lb-prev" aria-label="Sebelumnya">‹</button>
+  <button class="lb-nav lb-next" id="lb-next" aria-label="Berikutnya">›</button>
+  <div class="lb-cap" id="lb-cap"></div>
+</div>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('[data-lb]'));
+  if(!links.length) return;
+  var lb=document.getElementById('lb'), track=document.getElementById('lb-track'),
+      cnt=document.getElementById('lb-count'), cap=document.getElementById('lb-cap');
+  var caps=links.map(function(a){var fc=a.parentNode.querySelector('figcaption');return fc?fc.textContent:''});
+  links.forEach(function(a){
+    var sl=document.createElement('div'); sl.className='lb-slide';
+    var im=document.createElement('img'); im.src=a.getAttribute('href'); im.alt=a.querySelector('img').alt; im.loading='lazy';
+    sl.appendChild(im); track.appendChild(sl);
+  });
+  var cur=0;
+  function upd(){ cnt.textContent=(cur+1)+' / '+links.length; cap.textContent=caps[cur];
+    document.getElementById('lb-prev').disabled=cur===0; document.getElementById('lb-next').disabled=cur===links.length-1; }
+  function go(i,smooth){ cur=Math.max(0,Math.min(links.length-1,i));
+    track.scrollTo({left:cur*track.clientWidth,behavior:smooth===false?'auto':'smooth'}); upd(); }
+  function open(i){ lb.hidden=false; document.body.style.overflow='hidden';
+    requestAnimationFrame(function(){ go(i,false); }); document.getElementById('lb-x').focus(); }
+  function close(){ lb.hidden=true; document.body.style.overflow=''; links[cur].focus(); }
+  links.forEach(function(a,i){ a.addEventListener('click',function(e){ e.preventDefault(); open(i); }); });
+  var t; track.addEventListener('scroll',function(){ clearTimeout(t); t=setTimeout(function(){
+    var i=Math.round(track.scrollLeft/track.clientWidth); if(i!==cur){cur=i;upd();} },80); });
+  document.getElementById('lb-prev').onclick=function(){go(cur-1)};
+  document.getElementById('lb-next').onclick=function(){go(cur+1)};
+  document.getElementById('lb-x').onclick=close;
+  lb.addEventListener('click',function(e){ if(e.target.classList.contains('lb-slide')) close(); });
+  document.addEventListener('keydown',function(e){ if(lb.hidden) return;
+    if(e.key==='Escape') close(); else if(e.key==='ArrowRight') go(cur+1); else if(e.key==='ArrowLeft') go(cur-1); });
+  window.addEventListener('resize',function(){ if(!lb.hidden) go(cur,false); });
+})();
+</script>
+
 </body>
 </html>

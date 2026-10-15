@@ -1,6 +1,6 @@
 /* Konfigurasi situs TheraHub */
 /* Isi nomor WhatsApp resmi TheraHub (format 62xxxxxxxxxx). Selama kosong, tombol WA mengarah ke halaman kontak. */
-var WA_NUMBER = '';
+var WA_NUMBER = '6285862388938';
 
 (function(){
   if (!WA_NUMBER) return;

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harga — TheraHub</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site"><div class="in">
+  <a class="logo" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="#d8b26a" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 21c-4-2.6-6-5.4-6-8.5C6 9 8 6.5 12 3c4 3.5 6 6 6 9.5 0 3.1-2 5.9-6 8.5z"/><path d="M12 21V9"/><path d="M12 13c-1.6-.4-2.8-1.4-3.5-3M12 13c1.6-.4 2.8-1.4 3.5-3"/></svg>Thera<b>Hub</b></a>
+  <span class="links">
+    <a href="index.html">Beranda</a>
+    <a href="fitur.html">Fitur</a>
+    <a href="harga.html" class="on">Harga</a>
+    <a href="kontak.html">Kontak &amp; Demo</a>
+  </span>
+</div></nav>
+
+<header class="hero band"><div class="in">
+  <div class="tag">Harga &amp; Paket</div>
+  <h1>Investasi yang <em>sepadan</em> dengan kendali penuh</h1>
+  <p class="lead">Langganan per outlet per bulan. Akun pelanggan tidak dihitung sebagai akun berbayar. Harga belum termasuk pajak yang berlaku.</p>
+
+  <div class="toggle" role="tablist" aria-label="Periode pembayaran">
+    <button id="t-bln" class="on" onclick="setMode('bln')">Bulanan</button>
+    <button id="t-thn" onclick="setMode('thn')">Tahunan · bayar 11 bulan</button>
+  </div>
+  <div class="save-note" id="save-note" hidden>Pembayaran tahunan setara 11 bulan — hemat 1 bulan setiap tahun.</div>
+
+  <div class="plans">
+    <div class="plan">
+      <h3>Starter</h3>
+      <div class="for">Usaha kecil yang mulai merapikan booking, kasir, dan komisi.</div>
+      <div class="price"><b class="pv" data-bln="Rp299 rb" data-thn="Rp3,29 jt">Rp299 rb</b> <span class="pu" data-bln="/outlet/bulan" data-thn="/outlet/tahun">/outlet/bulan</span></div>
+      <div class="sub pv2" data-bln="&nbsp;" data-thn="setara Rp274 rb/bulan">&nbsp;</div>
+      <ul>
+        <li class="cap">Maksimal 10 terapis per outlet</li>
+        <li>Booking online &amp; walk-in</li>
+        <li>Manajemen ruangan &amp; sesi</li>
+        <li>Perpanjangan layanan (extension)</li>
+        <li>Kasir &amp; semua metode pembayaran</li>
+        <li>Komisi terapis otomatis</li>
+        <li>Payroll &amp; slip gaji terapis</li>
+        <li>Data pelanggan &amp; laporan dasar</li>
+      </ul>
+      <a class="btn btn-ghost" href="kontak.html" data-wa="Halo%20TheraHub%2C%20saya%20tertarik%20paket%20Starter.">Pilih Starter</a>
+    </div>
+
+    <div class="plan hot">
+      <div class="pop">Paling Populer</div>
+      <h3>Professional</h3>
+      <div class="for">Outlet refleksi &amp; massage dengan banyak terapis — alur inti lengkap sampai payroll.</div>
+      <div class="price"><b class="pv" data-bln="Rp499 rb" data-thn="Rp5,49 jt">Rp499 rb</b> <span class="pu" data-bln="/outlet/bulan" data-thn="/outlet/tahun">/outlet/bulan</span></div>
+      <div class="sub pv2" data-bln="&nbsp;" data-thn="setara Rp457 rb/bulan">&nbsp;</div>
+      <ul>
+        <li class="cap">Maksimal 25 terapis per outlet</li>
+        <li>Semua fitur Starter</li>
+        <li>Inventori &amp; pencatatan pengeluaran</li>
+        <li>Promo &amp; voucher</li>
+        <li>Portal pelanggan</li>
+        <li>Laporan outlet lengkap</li>
+      </ul>
+      <a class="btn btn-gold" href="kontak.html" data-wa="Halo%20TheraHub%2C%20saya%20tertarik%20paket%20Professional.">Pilih Professional</a>
+    </div>
+
+    <div class="plan">
+      <h3>Network</h3>
+      <div class="for">Pemilik 2 outlet atau lebih yang butuh pengawasan terkonsolidasi.</div>
+      <div class="price"><b class="pv" data-bln="Rp799 rb" data-thn="Rp8,79 jt">Rp799 rb</b> <span class="pu" data-bln="/bulan · 2 outlet" data-thn="/tahun · 2 outlet">/bulan · 2 outlet</span></div>
+      <div class="sub pv2" data-bln="Outlet berikutnya Rp299 rb/bulan" data-thn="Outlet berikutnya Rp3,29 jt/tahun">Outlet berikutnya Rp299 rb/bulan</div>
+      <ul>
+        <li class="cap">Maksimal 25 terapis per outlet</li>
+        <li>Semua fitur Professional</li>
+        <li>Dashboard Owner lintas outlet</li>
+        <li>Laporan konsolidasi revenue &amp; okupansi</li>
+        <li>Standar layanan &amp; harga terpusat</li>
+      </ul>
+      <a class="btn btn-ghost" href="kontak.html" data-wa="Halo%20TheraHub%2C%20saya%20tertarik%20paket%20Network.">Pilih Network</a>
+    </div>
+  </div>
+
+  <div class="oct" id="promo">
+    <div class="head">
+      <h3>Promo Pendaftaran Oktober 2026</h3>
+      <span class="tag-chip">Bayar 6 bulan · dapat 8 bulan</span>
+    </div>
+    <div class="cols">
+      <div>
+        <ul>
+          <li><b>Gratis 2 bulan</b> — bayar 6 bulan di depan, pakai 8 bulan penuh.</li>
+          <li><b>Gratis biaya instalasi</b> — setup katalog, ruangan, staf, aturan komisi &amp; pelatihan daring (normal Rp750 rb–1,5 jt/outlet).</li>
+          <li>Berlaku untuk pendaftaran <b>1–31 Oktober 2026</b>, semua paket.</li>
+          <li>Promo berlaku untuk periode langganan pertama; perpanjangan mengikuti harga normal.</li>
+        </ul>
+      </div>
+      <div class="calc">
+        <h4>Simulasi — Professional, 1 outlet</h4>
+        <table>
+          <tr><td>Langganan 6 bulan × Rp499.000</td><td>Rp2.994.000</td></tr>
+          <tr><td>Bonus 2 bulan pemakaian</td><td>Rp0</td></tr>
+          <tr><td>Biaya instalasi &amp; pelatihan</td><td><s style="color:var(--muted)">Rp1.500.000</s> Rp0</td></tr>
+          <tr class="tot"><td>Total dibayar (8 bulan pakai)</td><td>Rp2.994.000</td></tr>
+          <tr class="gain"><td>Penghematan hingga</td><td>Rp2.498.000</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <p class="fine">Biaya perangkat, domain khusus, pesan WhatsApp, payment gateway, dan pajak yang berlaku dinyatakan terpisah. Pengembangan khusus atau integrasi ditagih melalui penawaran terpisah sesuai ruang lingkup. Batas terapis berlaku per outlet.</p>
+</div></header>
+
+<section class="band alt"><div class="in">
+  <div class="eyebrow">Implementasi</div>
+  <h2>Kami bantu sampai <em>go-live</em></h2>
+  <p class="lead">Bukan sekadar akses aplikasi — setup awal, migrasi data, pelatihan tim per peran, pendampingan go-live, dan support berkelanjutan.</p>
+  <div class="impl">
+    <div class="it"><div class="p free">Gratis</div><h3>Aktivasi Mandiri</h3><p>Input data sendiri dengan panduan standar dan dokumentasi lengkap.</p></div>
+    <div class="it"><div class="p">Rp750 rb – 1,5 jt<span style="font-size:13px;color:var(--muted)">/outlet</span></div><h3>Setup &amp; Pelatihan</h3><p>Konfigurasi katalog, ruangan, staf, aturan komisi, plus pelatihan daring untuk seluruh peran. <b style="color:var(--teal)">Gratis di promo Oktober.</b></p></div>
+    <div class="it"><div class="p">Rp2 – 3 jt</div><h3>Migrasi Multi Outlet</h3><p>Migrasi dan konfigurasi menyeluruh untuk pemilik dua outlet atau lebih.</p></div>
+    <div class="it"><div class="p">Penawaran</div><h3>Pengembangan Khusus</h3><p>Fitur khusus atau integrasi sesuai kebutuhan, ditagih terpisah per ruang lingkup.</p></div>
+  </div>
+  <div class="split" style="margin-top:44px">
+    <div class="media"><img src="img/demo-laptop.jpg" alt="Staf spa membuka TheraHub di laptop saat pelatihan" style="max-width:300px"></div>
+    <div>
+      <h3 style="font-size:24px">Lima tahap pendampingan</h3>
+      <p class="lead" style="margin-top:12px">Setup awal sistem → migrasi &amp; penyesuaian data → training tim (owner, manager, kasir, terapis, admin) → pendampingan go-live → support berkelanjutan. Anda tidak ditinggal setelah akun dibuat.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="band"><div class="in">
+  <div class="eyebrow">Pertanyaan Umum</div>
+  <h2>Sebelum Anda <em>memutuskan</em></h2>
+  <div style="max-width:760px;margin-top:10px">
+    <details><summary>Bagaimana cara klaim promo Oktober?</summary><p>Daftar antara 1–31 Oktober 2026 dan lakukan pembayaran langganan 6 bulan di depan untuk paket mana pun. Masa aktif otomatis menjadi 8 bulan dan biaya setup &amp; pelatihan dibebaskan.</p></details>
+    <details><summary>Apakah akun pelanggan dihitung sebagai pengguna berbayar?</summary><p>Tidak. Batas terapis per paket hanya menghitung terapis aktif per outlet. Akun pelanggan/member tidak terbatas dan tidak dikenai biaya.</p></details>
+    <details><summary>Apa saja yang tidak termasuk harga langganan?</summary><p>Perangkat keras (printer struk, tablet), domain khusus, biaya pesan WhatsApp, biaya payment gateway, dan pajak yang berlaku. Semuanya dinyatakan terpisah dan transparan sejak awal.</p></details>
+    <details><summary>Bisakah mulai dari satu outlet lalu menambah cabang?</summary><p>Bisa. Mulai dari Starter atau Professional untuk satu outlet; saat cabang kedua dibuka, pindah ke paket Network dengan laporan gabungan untuk pemilik. Cabang berikutnya Rp299 rb/bulan.</p></details>
+    <details><summary>Bagaimana data saya dipindahkan dari pencatatan lama?</summary><p>Tim kami membantu input dan migrasi data awal secara aman dan terstruktur — katalog layanan, data terapis, harga, dan aturan komisi — sebagai bagian dari paket implementasi.</p></details>
+  </div>
+</div></section>
+
+<section class="final band"><div class="in">
+  <h2>Siap klaim <em>promo Oktober?</em></h2>
+  <p>Hubungi kami sebelum 31 Oktober 2026 — bayar 6 bulan, pakai 8 bulan, instalasi gratis.</p>
+  <div class="cta" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:26px">
+    <a class="btn btn-gold" href="kontak.html" data-wa="Halo%20TheraHub%2C%20saya%20mau%20klaim%20promo%20Oktober.">Hubungi Kami</a>
+    <a class="btn btn-ghost" href="fitur.html">Lihat Semua Fitur</a>
+  </div>
+</div></section>
+
+<footer class="site band"><div class="in">
+  <span>© 2026 TheraHub — Sistem Operasional &amp; Manajemen Spa · therahub.biz.id</span>
+  <span><a href="fitur.html">Fitur</a> · <a href="harga.html">Harga</a> · <a href="kontak.html">Kontak &amp; Demo</a></span>
+</div></footer>
+
+<script src="site.js"></script>
+<script>
+function setMode(m){
+  document.getElementById('t-bln').classList.toggle('on', m==='bln');
+  document.getElementById('t-thn').classList.toggle('on', m==='thn');
+  document.getElementById('save-note').hidden = (m==='bln');
+  document.querySelectorAll('.pv,.pu,.pv2').forEach(function(el){
+    var v = el.getAttribute('data-'+m);
+    if(v!==null) el.innerHTML = v;
+  });
+}
+</script>
+</body>
+</html>

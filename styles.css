@@ -219,3 +219,6 @@ footer.site a:hover{color:var(--gold-soft)}
 @media (max-width:380px){
   .flow{grid-template-columns:1fr}
 }
+
+/* Peran: 3 kolom rata di desktop */
+@media (min-width:721px){ .roles{grid-template-columns:repeat(3,1fr)} }

@@ -242,3 +242,41 @@ footer.site a:hover{color:var(--gold-soft)}
 .lb-nav:disabled{opacity:.25;cursor:default}
 @media (max-width:720px){ .lb-nav{display:none} .lb-slide{padding:4px 10px} }
 @media (prefers-reduced-motion:reduce){ .lb-track{scroll-behavior:auto} }
+
+/* Laporan & Analisa */
+.rep-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:20px;margin-top:34px;align-items:start}
+@media (max-width:900px){.rep-grid{grid-template-columns:1fr}}
+.rep-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;min-width:0;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.rep-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.rep-kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:800}
+.rep-head h3{font-size:20px;margin-top:4px;color:var(--gold-soft)}
+.rep-tabs{display:flex;gap:4px;background:var(--bg);border:1px solid var(--line-soft);border-radius:999px;padding:3px}
+.rep-tabs span{font-size:12px;font-weight:700;color:var(--muted);padding:5px 11px;border-radius:999px}
+.rep-tabs span.on{background:var(--gold);color:#241a06}
+.rep-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.rep-kpis div{background:var(--bg);border-radius:10px;padding:12px;min-width:0}
+.rep-kpis span{display:block;font-size:11.5px;color:var(--muted)}
+.rep-kpis b{display:block;font-family:var(--display);font-size:20px;color:var(--fg);font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums}
+.rep-kpis i{display:block;font-style:normal;font-size:11.5px;color:var(--muted);margin-top:2px}
+.rep-kpis i.up{color:var(--teal)} .rep-kpis i.down{color:var(--gold)}
+.rep-chart{width:100%;height:auto;margin-top:16px;display:block}
+.rep-chart .grid line{stroke:rgba(255,255,255,.07);stroke-width:1}
+.rep-chart .ax text{fill:var(--muted);font-size:10px;font-family:var(--body);text-anchor:end}
+.rep-chart .ax.lbl text{text-anchor:middle}
+.rep-chart .bars rect{fill:rgba(216,178,106,.45)}
+.rep-chart .bars rect.hi{fill:var(--gold)}
+.rep-table-wrap{overflow-x:auto;margin-top:18px;border:1px solid var(--line-soft);border-radius:12px}
+.rep-table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums;min-width:440px}
+.rep-table th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:10px 12px;background:var(--bg);white-space:nowrap}
+.rep-table th:nth-child(2){color:var(--gold-soft)}
+.rep-table td{padding:10px 12px;border-top:1px solid var(--line-soft);white-space:nowrap}
+.rep-table .st{color:var(--gold)} .rep-table .st .off{color:rgba(255,255,255,.15)}
+.rep-list{list-style:none;margin:18px 0 0;padding:16px 0 0;border-top:1px solid var(--line-soft);display:flex;flex-direction:column;gap:9px;font-size:14px;color:var(--muted)}
+.rep-list li{display:flex;gap:10px}
+.rep-list li::before{content:"✓";color:var(--teal);font-weight:800;flex:0 0 auto}
+@media (max-width:720px){ .rep-card{padding:18px} .rep-kpis{grid-template-columns:1fr 1fr 1fr;gap:6px} .rep-kpis div{padding:9px} .rep-kpis b{font-size:16px} }
+.rep-chart .grid line.base{stroke:rgba(255,255,255,.18)}
+.rep-chart .peak{fill:var(--gold-soft);font-size:11px;font-weight:700;font-family:var(--body);text-anchor:middle}
+.rep-table{min-width:0}
+.rep-table th,.rep-table td{padding:10px 9px}
+@media (max-width:720px){ .rep-table{min-width:420px} }

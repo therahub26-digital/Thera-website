@@ -177,3 +177,45 @@ footer.site a:hover{color:var(--gold-soft)}
   .plan.hot{transition:transform .25s}
   .plan.hot:hover{transform:translateY(-4px)}
 }
+
+/* ===== Mobile ===== */
+.logo span{display:inline}
+@media (max-width:720px){
+  nav.site .in{flex-direction:column;align-items:stretch;gap:10px;padding-block:12px 10px}
+  .logo{font-size:19px}
+  nav.site .links{margin-left:0;flex-wrap:nowrap;overflow-x:auto;gap:6px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+    margin-inline:calc(-1 * max(16px, env(safe-area-inset-left,0px)));
+    padding-inline:max(16px, env(safe-area-inset-left,0px))}
+  nav.site .links::-webkit-scrollbar{display:none}
+  nav.site .links a{flex:0 0 auto;padding:7px 14px;font-size:13.5px;border:1px solid var(--line-soft);white-space:nowrap}
+  nav.site .links a.on{border-color:var(--gold)}
+
+  .band>.in{padding-block:44px}
+  .hero .in{padding-block:40px 40px}
+  h1{font-size:clamp(30px,8.4vw,40px)}
+  h2{font-size:clamp(24px,7vw,30px)}
+  .lead{font-size:15px}
+  .hero .cta,.final .cta,.cta{flex-direction:column;align-items:stretch}
+  .btn{justify-content:center;width:100%}
+  .hero-grid{gap:28px}
+
+  .promo .in{flex-direction:column;align-items:flex-start;gap:10px}
+  .grid,.grid-3,.impl,.plans,.roles{grid-template-columns:1fr;gap:14px}
+  .flow{grid-template-columns:1fr 1fr}
+  .split{gap:24px}
+  .feat,.plan,.role,.impl .it{padding:20px}
+  .plan .for{min-height:0}
+  .plans{margin-top:28px}
+  .plan.hot{margin-top:10px}
+  .toggle{display:flex;width:100%}
+  .toggle button{flex:1;padding:9px 8px;font-size:13px}
+  .oct{padding:22px}
+  .oct h3{font-size:21px}
+  .calc table{font-size:13px}
+  .gallery{grid-template-columns:1fr 1fr;gap:12px}
+  footer.site .in{flex-direction:column;gap:8px}
+}
+@media (max-width:380px){
+  .flow{grid-template-columns:1fr}
+}

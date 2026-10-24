@@ -310,3 +310,12 @@ section[id]{scroll-margin-top:84px}
 @media (max-width:720px){ .best-stats{gap:10px} .best-stats div{padding:16px} .best-stats b{font-size:28px} }
 .oct ul li{display:block;position:relative;padding-left:24px}
 .oct ul li::before{position:absolute;left:0;top:0}
+
+/* Tombol Masuk aplikasi di menu */
+nav.site .links a.nav-login{border:1px solid var(--gold);color:var(--gold-soft);margin-left:6px}
+nav.site .links a.nav-login:hover{background:var(--gold);color:#241a06}
+@media (max-width:720px){ nav.site .links a.nav-login{margin-left:0;border-color:var(--gold)} }
+@media (max-width:720px){
+  nav.site .in{position:relative}
+  nav.site .links a.nav-login{position:absolute;top:calc(12px + 2px);right:max(16px, env(safe-area-inset-right,0px));padding:6px 16px}
+}

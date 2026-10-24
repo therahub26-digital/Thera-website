@@ -283,3 +283,30 @@ footer.site a:hover{color:var(--gold-soft)}
 
 /* Lompat ke #demo-langsung / #laporan tidak tertutup nav yang menempel (2026-10-23) */
 section[id]{scroll-margin-top:84px}
+
+/* Matriks modul paket */
+.mx-wrap{overflow-x:auto;margin-top:30px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.mx{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.mx thead th{position:sticky;top:0;background:var(--card-2);font-family:var(--display);font-size:17px;font-weight:600;color:var(--fg);padding:16px 14px;text-align:center;border-bottom:1px solid var(--line)}
+.mx thead th:first-child{text-align:left;font-family:var(--body);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mx thead th.hot{color:var(--gold-soft)}
+.mx tbody th{text-align:left;font-weight:500;color:var(--fg);padding:11px 14px}
+.mx td{text-align:center;padding:11px 10px;color:var(--muted);white-space:nowrap}
+.mx td:nth-child(3){background:rgba(216,178,106,.05)}
+.mx tbody tr+tr th,.mx tbody tr+tr td{border-top:1px solid var(--line-soft)}
+.mx tr.grp th{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:800;padding-top:20px;background:var(--bg-2)}
+.mx .ck{color:var(--teal);font-weight:800;font-size:16px}
+.mx .no{color:rgba(255,255,255,.22)}
+@media (max-width:720px){ .mx{font-size:13px} .mx thead th{font-size:14px;padding:12px 8px} .mx tbody th{padding:10px 10px} }
+
+/* Keunggulan: fitur terlengkap */
+.best{background:radial-gradient(800px 360px at 100% 0%, rgba(216,178,106,.10), transparent 60%), var(--bg)}
+.best-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.best-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.best-stats div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+.best-stats b{display:block;font-family:var(--display);font-size:34px;font-weight:600;color:var(--gold-soft);line-height:1}
+.best-stats span{display:block;font-size:13.5px;color:var(--muted);margin-top:8px}
+@media (max-width:860px){ .best-grid{grid-template-columns:1fr;gap:26px} }
+@media (max-width:720px){ .best-stats{gap:10px} .best-stats div{padding:16px} .best-stats b{font-size:28px} }
+.oct ul li{display:block;position:relative;padding-left:24px}
+.oct ul li::before{position:absolute;left:0;top:0}
